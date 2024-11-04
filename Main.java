@@ -42,6 +42,9 @@ public class Main {
         listeChaines.insert(0, "nouveau premier");
         System.out.println("Après insertion à l'indice 0: " + listeChaines);
 
+        /* Exception in thread "main" java.lang.NullPointerException: Cannot invoke "up.mi.paa.td06.Noeud.getE()" because "courant" is null
+	at up.mi.paa.td06.ListChainee.add(ListChainee.java:17)
+	at up.mi.paa.td06.Main.main(Main.java:7)*/
         // Test de la méthode remove
         listeChaines.remove(3); // Supprime l'élément à l'indice 3
         System.out.println("Après suppression à l'indice 3: " + listeChaines);
