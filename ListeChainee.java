@@ -136,4 +136,17 @@ public static void sortList(List<Integer> list) {
         list.set(j + 1, key);
     }
 }
+
+public static <T extends Comparable<? super T>> T maxElement(List<T> list) {
+    if (list == null || list.isEmpty()) {
+        throw new IllegalArgumentException("La liste ne peut pas être nulle ou vide.");
+    }
+    T max = list.get(0);
+    for (T element : list) {
+        if (element.compareTo(max) > 0) {
+            max = element;
+        }
+    }
+    return max;
+}
 }
