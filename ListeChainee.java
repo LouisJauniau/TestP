@@ -121,4 +121,19 @@ public static double average(List<Integer> list) {
     }
     return sum / list.size();
 }
+
+public static void sortList(List<Integer> list) {
+    if (list == null || list.size() <= 1) {
+        return; // La liste est déjà triée
+    }
+    for (int i = 1; i < list.size(); i++) {
+        Integer key = list.get(i);
+        int j = i - 1;
+        while (j >= 0 && list.get(j) > key) {
+            list.set(j + 1, list.get(j));
+            j--;
+        }
+        list.set(j + 1, key);
+    }
+}
 }
