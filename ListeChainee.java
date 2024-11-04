@@ -97,4 +97,28 @@ public class ListChainee<E> {
         sb.append("FIN");
         return sb.toString();
     }
+
+    public static Integer maxElement(List<Integer> list) {
+    if (list == null || list.isEmpty()) {
+        throw new IllegalArgumentException("La liste ne peut pas être nulle ou vide.");
+    }
+    Integer max = list.get(0);
+    for (Integer num : list) {
+        if (num > max) {
+            max = num;
+        }
+    }
+    return max;
+}
+
+public static double average(List<Integer> list) {
+    if (list == null || list.isEmpty()) {
+        throw new IllegalArgumentException("La liste ne peut pas être nulle ou vide.");
+    }
+    double sum = 0;
+    for (Integer num : list) {
+        sum += num;
+    }
+    return sum / list.size();
+}
 }
